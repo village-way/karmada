@@ -5,6 +5,7 @@ on:
   push:
   pull_request:
 # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#concurrency
+  workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}-${{ github.actor }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
